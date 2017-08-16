@@ -6,9 +6,9 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @EnableEurekaServer
 @SpringBootApplication
-public class MicroserviceDiscoveryEurekaApplication {
+public class MicroserviceDiscoveryEurekaHaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MicroserviceDiscoveryEurekaApplication.class, args);
+		SpringApplication.run(MicroserviceDiscoveryEurekaHaApplication.class, args);
 	}
 }
