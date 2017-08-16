@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.scl.cloud</groupId>
-	<artifactId>microservice-discovery-eureka</artifactId>
+	<artifactId>microservice-discovery-eureka-hb</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>microservice-discovery-eureka</name>
-	<description>microservice-discovery-eureka</description>
+	<name>microservice-discovery-eureka-hb</name>
+	<description>microservice-discovery-eureka-hb</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
