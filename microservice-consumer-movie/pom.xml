@@ -36,11 +36,13 @@
 			<scope>test</scope>
 		</dependency>
 		
-		<!-- Eureka -->
+		<!-- Eureka 依赖中包含了ribbon，无需再次引入 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
+
+
 	</dependencies>
 
 	<dependencyManagement>
