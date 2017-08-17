@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.scl.cloud</groupId>
-	<artifactId>microservice-simple-consumer-movie</artifactId>
+	<artifactId>microservice-consumer-movie</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>microservice-simple-consumer-movie</name>
-	<description>microservice-simple-consumer-movie</description>
+	<name>microservice-consumer-movie</name>
+	<description>microservice-consumer-movie</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
