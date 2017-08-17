@@ -3,3 +3,7 @@
 *.swp
 /mvn
 *.cmd
+.project
+.classpath
+.settings/
+.gitignore

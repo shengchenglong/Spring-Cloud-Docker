@@ -8,8 +8,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>mocroservice-provider-user2</name>
-	<description>mocroservice-provider-user2</description>
+	<name>microservice-provider-user2</name>
+	<description>microservice-provider-user2</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
