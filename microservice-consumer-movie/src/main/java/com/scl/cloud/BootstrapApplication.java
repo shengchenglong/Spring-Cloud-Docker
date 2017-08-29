@@ -9,10 +9,10 @@ import org.springframework.web.client.RestTemplate;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-public class MicroserviceSimpleConsumerMovieApplication {
+public class BootstrapApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MicroserviceSimpleConsumerMovieApplication.class, args);
+		SpringApplication.run(BootstrapApplication.class, args);
 	}
 
 	@Bean
