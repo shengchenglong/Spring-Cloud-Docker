@@ -58,10 +58,10 @@ public class MovieController {
     @Resource
     private UserSpringMVCClient userSpringMVCClient;
 
-//    @GetMapping("user/{id}")
-//    public User findById(@PathVariable Long id) {
-//        return this.userFeignClient.findById(id);
-//    }
+    @GetMapping("user/{id}")
+    public User findById(@PathVariable Long id) {
+        return this.userFeignClient.findById(id);
+    }
 
     @PostMapping("findByIdAndName")
     public List<User> findByIdMvc(@RequestParam("id") Long id, @RequestParam("username") String username) {

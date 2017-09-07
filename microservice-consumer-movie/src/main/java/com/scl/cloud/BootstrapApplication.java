@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableFeignClients
 
 // 启动断路器支持
-@EnableHystrix
+//@EnableHystrix
 //@EnableCircuitBreaker
 public class BootstrapApplication {
 
