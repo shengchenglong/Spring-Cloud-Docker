@@ -3,9 +3,10 @@ package com.scl.cloud.controller.rest;
 import com.scl.cloud.dao.UserRepository;
 import com.scl.cloud.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author shengchenglong
@@ -22,6 +23,23 @@ public class UserController {
     public User findUserById(@PathVariable Long id) {
         User user = userRepository.findOne(id);
         return user;
+    }
+
+    @PostMapping("findByIdAndName")
+    public List findByIdAndName(@RequestParam("id")Long id, @RequestParam("username") String username) {
+        User user = new User();
+        user.setId(id);
+        user.setUsername(username);
+        List<User> users = new ArrayList<>();
+        users.add(user);
+        return users;
+    }
+
+    @PostMapping("findByExample")
+    List<User> findByExample(@RequestBody User user) {
+        List<User> users = new ArrayList<>();
+        users.add(user);
+        return users;
     }
 
 }

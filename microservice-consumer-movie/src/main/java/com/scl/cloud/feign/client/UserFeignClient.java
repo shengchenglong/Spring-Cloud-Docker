@@ -1,15 +1,13 @@
-package com.scl.cloud.feign;
+package com.scl.cloud.feign.client;
 
 import feign.Param;
 import feign.RequestLine;
 import org.springframework.cloud.netflix.feign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import com.scl.cloud.pojo.User;
 
 /**
- * 
+ * 使用Feign自己的注解的 FeignClient
  * @author shengchenglong<br/>
  * @date 2017年8月29日 下午1:27:28<br/>
  * @version 
@@ -18,18 +16,16 @@ import com.scl.cloud.pojo.User;
 
 // @FeignClient注解的name是一个任意的客户端名称，用于创建Ribbon负载均衡器
 // 在本例中，使用了Eureka，则Ribbon会把microservice-provider-user解析成Eureka Server服务注册表中的服务
+
 //@FeignClient(name = "microservice-provider-user")
-// 自定义Feign配置
-@FeignClient(name = "microservice-provider-user", configuration = FeignConfiguration.class)
+// 自定义Feign配置（这里的configuration不写也会是该值，因为FeignConfiguration在Spring的上下文中）
+@FeignClient(name = "microservice-provider-user") //, configuration = FeignConfiguration.class)
+
 // 还可以使用url属性指定请求URL
 //@FeignClient(name = "microservice-provider-user", url = "http://localhost:9999/")
 public interface UserFeignClient {
 
-//	SpringMvc的注解
-//	@GetMapping(value = "{id}")
-//	public User findById(@PathVariable("id") Long id);
-
 //	使用Feign自带的注解
-	@RequestLine("GET /{id}")
-	public User findById(@Param("id") Long id);
+//	@RequestLine("GET /{id}")
+//	public User findById(@Param("id") Long id);
 }
