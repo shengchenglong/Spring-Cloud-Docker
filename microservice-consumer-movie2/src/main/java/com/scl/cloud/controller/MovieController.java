@@ -98,7 +98,4 @@ public class MovieController {
         return u;
     }
 
-
-
-
 }
