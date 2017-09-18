@@ -24,11 +24,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 // 2.为Feign添加Hystrix的回退方法，使用fallback属性
 // 3.通过FallbackFactory来检查回退原因
 // 4. FallBack 和 FallBackFactory 存在一个即可
-@FeignClient(name = "microservice-provider-user",
-// configuration = FeignConfiguration.class)
-//fallback = UserFeignClientFallBack.class)
-fallbackFactory = UserFeignClientFallBackFactory.class)
-
+@FeignClient(name = "microservice-provider-user"
+// ,configuration = FeignConfiguration.class)
+//,fallback = UserFeignClientFallBack.class)
+,fallbackFactory = UserFeignClientFallBackFactory.class)
+//)
 
 // 还可以使用url属性指定请求URL
 //@FeignClient(name = "microservice-provider-user", url = "http://localhost:9999/")
